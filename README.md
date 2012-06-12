@@ -4,7 +4,6 @@ Node.js Base Application
 NodeBase is a custom built web application framework built on top of some of the webs favourite languages and technologies.  With NodeBase you can get started with Web Sockets, MySQL & LESS.
 
 ## How to install
-***
 
 Using either your commandline application or via a Git GUI application clone the latest version of NodeBase into your chosen directory.
 
