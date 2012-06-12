@@ -1,13 +1,25 @@
-var url = require("url");
-var express = require('express');
-var db_helper = require("./db_helper.js");
+var url = require("url"),
+	express = require('express'),
+	fs = require('fs'),
+	less = require('less'),
+	http = require("http"),
+	io = require("socket.io"); 
 
-var http = require("http"),
-	 io = require("socket.io"),
-	 server = express.createServer();
+var server = express.createServer();
+var db_helper = require("./db_helper.js");
 
 server.configure(function () {
   server.use(express.static(__dirname + '/public'));
+  console.log(__dirname);
+});
+
+fs.readFile(__dirname+'/public/css/style.less',function(error,data){
+    data = data.toString();
+    less.render(data, function (e, css) {
+        fs.writeFile(__dirname+'/public/css/styles.css', css, function(err){
+            console.log('done');
+        });
+    });
 });
 
 server.get('/', function (req, res) {
