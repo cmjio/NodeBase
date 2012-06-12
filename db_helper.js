@@ -1,11 +1,15 @@
 var mysql = require('mysql');
+
+// EDIT HERE
+var MYSQL_HOST = '127.0.0.1';
 var MYSQL_USERNAME = 'root';
 var MYSQL_PASSWORD = '';
 var NEW_DB_NAME = 'edge_dev_1';
 var NEW_INSTALL = false;
+// END
  
 var client = mysql.createClient({
-  host:'127.0.0.1',
+  host: MYSQL_HOST,
   user: MYSQL_USERNAME,
   password: MYSQL_PASSWORD
 });
