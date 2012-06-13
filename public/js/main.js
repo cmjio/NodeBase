@@ -21,6 +21,7 @@ $(function() {
         //console.log(JSON.parse(data));
         console.log('Application Params Received',data);
         application.pushParams(data);
+        document.write(data);
     });
 
     setInterval(function(){

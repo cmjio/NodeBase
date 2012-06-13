@@ -3,14 +3,17 @@ Node.js Base Application
 
 NodeBase is a custom built web application framework built on top of some of the webs favourite languages and technologies.  With NodeBase you can get started with Web Sockets, MySQL & LESS.
 
-## How to install
+# Prequisites
+For this to work you must have `node.js` installed on the computer or server you are working from.  Visit [http://nodejs.org/](http://nodejs.org/ "Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications.") for installation guides.
+
+# How to install
 
 Using either your commandline application or via a Git GUI application clone the latest version of NodeBase into your chosen directory.
 
-	cd /your_chosen_dir
-	git clone git@github.com:edgeui/NodeBase.git NodeBase
+	cd /your_chosen_directory
+	git clone git@github.com:edgeui/NodeBase.git your_application_name
 
-This will create a folder called NodeBase with the files inside your chosen directory.  The next step is to open up the NodeBase project in your editor of choice. Look for the following file in your project:
+This will create a folder with the name `your_application_name` you selected for the step above. Inside that folder will be the files you work with.  The next step is to open up the NodeBase project in your editor of choice. Look for the following file in your project:
 
 	/NodeBase/db_helper.js
 
@@ -26,7 +29,7 @@ Save the file then in your command line application navigate to your NodeBase pr
 	cd /NodeBase
 	node server.js
 
-This will run the server and create a database and create a table called 'params' in that database.
+This will run the node.js server and create a database and create a table called `params` in the database specified above.
 
 	var tableParams = "“+ 
 	”create table params(“+ ” id int(11) NOT NULL AUTO_INCREMENT,“+ 
