@@ -4,9 +4,9 @@ window.application = {
 	// Socket
 	socket:null,
 	// Elements
-	// 
+	
 	// Boolean Values
-	// 
+	loggedIn:false, 
 	// Variables
 	userID:null,
 	userCount:0,
@@ -25,7 +25,16 @@ window.application = {
 
 		if(_.params != null){
 			document.title = _.params.application_name;
+			if(_.userID == null){
+				_.showModal('welcome');
+			}
 		}
+	},
+
+	showModal:function(id){
+		var _ = this;
+		$('#modal').fadeIn('slow');
 	}
+
 
 }
