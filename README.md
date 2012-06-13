@@ -3,7 +3,7 @@ Node.js Base Application
 
 NodeBase is a custom built web application framework built on top of some of the webs favourite languages and technologies.  With NodeBase you can get started with Web Sockets, MySQL & LESS.
 
-# Prequisites
+# Prerequisites
 For this to work you must have `node.js` installed on the computer or server you are working from.  Visit [http://nodejs.org/](http://nodejs.org/ "Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications.") for installation guides.
 
 # How to install
