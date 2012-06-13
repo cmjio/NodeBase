@@ -8,7 +8,6 @@ $(function() {
     var counter; 
 
     socket.on('connect',function() {
-        application.init();
         console.log('Get Application Params');
         socket.emit('get_params');
     });
@@ -19,9 +18,8 @@ $(function() {
 
     socket.on('params',function(data){
         //console.log(JSON.parse(data));
-        console.log('Application Params Received',data);
-        application.pushParams(data);
-        document.write(data);
+        console.log('Application Params Received');
+        application.init(data);
     });
 
     setInterval(function(){

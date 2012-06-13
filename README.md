@@ -24,9 +24,9 @@ Edit the following lines with your MySQL database settings
 	var MYSQL_PASSWORD = 'password';
 	var NEW_DB_NAME = 'database_name';
 
-Save the file then in your command line application navigate to your NodeBase project and start the server.
+Save the file then in your command line application navigate into your NodeBase project and start the server.
 
-	cd /NodeBase
+	cd /your_application_name
 	node server.js
 
 This will run the node.js server and create a database and create a table called `params` in the database specified above.
@@ -46,3 +46,4 @@ This will run the node.js server and create a database and create a table called
 	}); 
 	console.log(‘table params is created.’);
 
+This table will eventually be populated with your application settings that you require for functions and methods.

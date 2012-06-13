@@ -7,7 +7,7 @@ var MYSQL_PASSWORD = '';
 var NEW_DB_NAME = 'edge_dev_1';
 var NEW_INSTALL = false;
 // END
- 
+
 var client = mysql.createClient({
   host: MYSQL_HOST,
   user: MYSQL_USERNAME,
