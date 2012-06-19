@@ -25,16 +25,21 @@ window.application = {
 
 		if(_.params != null){
 			document.title = _.params.application_name;
-			if(_.userID == null){
-				_.showModal('welcome');
-			}
+			clickEvents();
 		}
 	},
 
-	showModal:function(id){
-		var _ = this;
-		$('#modal').fadeIn('slow');
-	}
+	clickEvents:function(=){
+		
+		/**
+		 * Register Form
+		 */
+		$('input[name=register]').click(function(e){
+			e.preventDefault();
+		})
+	},
+
+
 
 
 }
