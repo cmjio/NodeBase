@@ -25,18 +25,21 @@ window.application = {
 
 		if(_.params != null){
 			document.title = _.params.application_name;
-			clickEvents();
+			_.clock();
 		}
 	},
 
-	clickEvents:function(=){
-		
-		/**
-		 * Register Form
-		 */
-		$('input[name=register]').click(function(e){
-			e.preventDefault();
-		})
+	clock:function(){
+		var d = new Date();
+			var hh = d.getHours();
+			var mm = d.getMinutes();
+			$('#time').text(hh+':'+mm);
+		setInterval(function(){
+			var d = new Date();
+			var hh = d.getHours();
+			var mm = d.getMinutes();
+			$('#time').text(hh+':'+mm);
+		},60000);
 	},
 
 
