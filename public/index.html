@@ -17,11 +17,12 @@
 
     <script src="js/live.js"></script>
 
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
 
     <!-- JS Libs -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
+    <script type="js/bootstrap.min.js"></script>
 
     <!-- Application Files -->
     <script src="js/application.js"></script>
@@ -29,21 +30,31 @@
 </head>
 <body>
 
-    <!-- Main -->
-    <div id="wrapper">
-        <div id="status" class="black">
-            <div id="time">17:39</div>
-        </div>
-        <div id="topbar" class="plain">
-            <div id="menu" class="btn blue"></div>
-            <h1>Inbox - 2 Unread</h1>
-            <div id="compose" class="btn brown"></div>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a href="" title="" class="brand">Express</a>
+                <ul class="nav">
+                    <li class="active"><a href="#" title="">Home</a></li>
+                    <li><a href="#" title="">Help</a></li>
+                </ul>
+                <ul class="nav pull-right">
+                      <li class="dropdown">
+                        <a href="#" title="" class="dropdown-toggle" data-toggle="dropdown">Chris Johnson<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">menu section</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">menu section</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="dropdown-menu">
+                      
+                </div>  
+            </div>
         </div>
     </div>
-    
-
-	<!-- Modals -->
-
+   
 	<!-- Javascript -->
 	<script src="js/main.js"></script>
 	<script>
