@@ -8,11 +8,8 @@ var url = require("url"),
 	express = require('express'),
 	fs = require('fs'),
 	less = require('less'),
-	http = require("http"),
-	io = require("socket.io"); 
+	http = require("http"),x
 
-// Require Database script
-var db_helper = require("./db_helper.js");
 
 // Create Express.js Server
 var server = express.createServer();
@@ -22,6 +19,7 @@ server.configure(function () {
 	server.use(express.static(__dirname + '/public'));
 });
 
+<<<<<<< HEAD
 LESS.css Compiler: compiles styles.less > styles.css
 fs.readFile(__dirname+'/public/css/styles.less',function(error,data){
     data = data.toString();
@@ -32,6 +30,8 @@ fs.readFile(__dirname+'/public/css/styles.less',function(error,data){
     });
 });
 
+=======
+>>>>>>> d8e564c2844081290f2620afdec5a9404ad92fcb
 // Routes
 server.get('/', function (req, res) {
 	res.render('index', { layout: false });
@@ -47,32 +47,3 @@ server.listen(1234, function(){
 	console.log('app listening on http://' + addr.address + ':' + addr.port);
 });	 
 
-// Socketio listening to server
-var io = io.listen(server);
-
-// Socket.io Clients obj, used by server
-var clients = {};
-
-io.sockets.on('connection', function(socket){
-
-	var userCount = 0;
-
-	clients[socket.id] = socket;
-
-	socket.on('get_params',function(){
-		db_helper.get_params(function(params) {
-    		socket.emit('params', params);
-  		});
-	});
-
-	// Emit connected user count every second (1000ms) if it changes
-	setInterval(function(){
-			var newCount = io.sockets.clients().length;
-			if(newCount != userCount){
-				userCount = newCount;
-				socket.emit('userCount',{count:newCount});
-				//socket.emit('users',clients);
-			}
-	},1000);
-	
-});
