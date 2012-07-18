@@ -22,15 +22,15 @@ server.configure(function () {
 	server.use(express.static(__dirname + '/public'));
 });
 
-// LESS.css Compiler: compiles styles.less > styles.css
-// fs.readFile(__dirname+'/public/css/styles.less',function(error,data){
-//     data = data.toString();
-//     less.render(data, function (e, css) {
-//         fs.writeFile(__dirname+'/public/css/styles.css', css, function(err){
-//             console.log('done');
-//         });
-//     });
-// });
+LESS.css Compiler: compiles styles.less > styles.css
+fs.readFile(__dirname+'/public/css/styles.less',function(error,data){
+    data = data.toString();
+    less.render(data, function (e, css) {
+        fs.writeFile(__dirname+'/public/css/styles.css', css, function(err){
+            console.log('done');
+        });
+    });
+});
 
 // Routes
 server.get('/', function (req, res) {
