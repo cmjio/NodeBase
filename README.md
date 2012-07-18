@@ -1,4 +1,4 @@
-Node.js Base Application
+Node.js Base Application by Chris Johnson
 ===
 
 NodeBase is a custom built web application framework built on top of some of the webs favourite languages and technologies.  With NodeBase you can get started with Web Sockets, MySQL & LESS.
